@@ -23,6 +23,7 @@ export function AIDescriptionTool() {
       const output = await genAIProjectDescriptionAssistant({ projectNotes: notes });
       setResult(output.description);
     } catch (error) {
+      console.error("Failed to generate description:", error);
       toast({
         variant: "destructive",
         title: "Error",

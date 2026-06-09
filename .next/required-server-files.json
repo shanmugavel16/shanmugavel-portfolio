@@ -320,6 +320,7 @@
   "appDir": "C:\\Users\\shanm\\Desktop\\portfolio",
   "relativeAppDir": "",
   "files": [
+    ".next\\package.json",
     ".next\\routes-manifest.json",
     ".next\\server\\pages-manifest.json",
     ".next\\build-manifest.json",

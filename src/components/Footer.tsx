@@ -6,7 +6,10 @@ export function Footer() {
   const [currentYear, setCurrentYear] = useState<number | null>(null);
 
   useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
+    const timer = setTimeout(() => {
+      setCurrentYear(new Date().getFullYear());
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   return (

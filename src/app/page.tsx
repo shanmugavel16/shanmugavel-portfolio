@@ -21,9 +21,6 @@ import {
   Code2,
   Terminal,
   Figma,
-  Rocket,
-  Cpu,
-  Layers,
   GraduationCap,
   Target,
   Heart,
@@ -31,19 +28,14 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import emailjs from "@emailjs/browser";
 
 export default function Home() {
-  const [currentYear, setCurrentYear] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -259,7 +251,7 @@ export default function Home() {
             </h2>
             
             <p className="text-muted-foreground text-lg font-light leading-relaxed">
-              Hello! I'm Shanmugavel, a Computer Science and Design student. I love bridging the gap between hardware mechanics and beautiful software interfaces. My process combines engineering logic with user experience aesthetics.
+              Hello! I&apos;m Shanmugavel, a Computer Science and Design student. I love bridging the gap between hardware mechanics and beautiful software interfaces. My process combines engineering logic with user experience aesthetics.
             </p>
 
             <div className="space-y-6">
@@ -426,7 +418,7 @@ export default function Home() {
               className="space-y-12 text-center lg:text-left"
             >
               <div className="space-y-6">
-                <h3 className="text-4xl font-bold tracking-tight">Let's build something beautiful.</h3>
+                <h3 className="text-4xl font-bold tracking-tight">Let&apos;s build something beautiful.</h3>
                 <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-md mx-auto lg:mx-0">
                   Whether you have an IoT project idea, need a frontend developer, or just want to chat about tech, feel free to send a message.
                 </p>
