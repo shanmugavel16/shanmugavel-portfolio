@@ -23,7 +23,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-fit max-w-7xl">
       <div className="glass-card px-6 md:px-8 py-3 rounded-full flex items-center justify-between md:justify-start md:gap-8">
-        <Link href="/" className="font-bold text-lg tracking-tight mr-4">
+        <Link href="/" className="font-bold text-lg tracking-tight mr-4 whitespace-nowrap">
           SHANMU<span className="text-accent">GAVEL</span>
         </Link>
         
@@ -57,7 +57,7 @@ export function Navbar() {
             <SheetContent side="right" className="bg-background/95 backdrop-blur-xl border-white/10 p-8 w-[80%] sm:w-[350px]">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-12">
-                   <SheetTitle className="font-bold text-xl tracking-tight text-white">
+                   <SheetTitle className="font-bold text-xl tracking-tight text-white whitespace-nowrap">
                     SHANMU<span className="text-accent">GAVEL</span>
                   </SheetTitle>
                 </div>

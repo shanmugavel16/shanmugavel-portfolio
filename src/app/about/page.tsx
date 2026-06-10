@@ -39,7 +39,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-4 md:px-8">
+    <div className="min-h-screen pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-8 w-full max-w-full overflow-x-hidden flex flex-col">
       <Navbar />
 
       <div className="max-w-7xl mx-auto space-y-32">
@@ -50,12 +50,12 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-8"
           >
-            <h1 className="text-6xl md:text-8xl font-extrabold leading-none tracking-tighter mb-8">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-none tracking-tighter mb-8">
               About <span className="text-accent font-serif italic text-glow">Me</span>
             </h1>
             
             <div className="about-details space-y-6">
-              <div className="detail-card glass-card p-6 rounded-2xl hover:border-accent/30">
+              <div className="detail-card glass-card p-5 sm:p-6 rounded-xl sm:rounded-2xl hover:border-accent/30">
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <span>🎓</span> Education
                 </h3>
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="detail-card glass-card p-6 rounded-2xl hover:border-accent/30">
+              <div className="detail-card glass-card p-5 sm:p-6 rounded-xl sm:rounded-2xl hover:border-accent/30">
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <span>💡</span> Passion
                 </h3>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="detail-card glass-card p-6 rounded-2xl hover:border-accent/30">
+              <div className="detail-card glass-card p-5 sm:p-6 rounded-xl sm:rounded-2xl hover:border-accent/30">
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <span>🎯</span> Goal
                 </h3>
@@ -88,9 +88,9 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative aspect-[4/5] w-full max-w-md mx-auto rounded-[2.5rem] overflow-hidden glass-card p-3 shadow-2xl shadow-accent/10 lg:sticky lg:top-32"
+            className="relative aspect-[4/5] w-full max-w-md mx-auto rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden glass-card p-2 sm:p-3 shadow-2xl shadow-accent/10 lg:sticky lg:top-32"
           >
-            <div className="relative w-full h-full rounded-[2rem] overflow-hidden group">
+            <div className="relative w-full h-full rounded-[1.2rem] sm:rounded-[2rem] overflow-hidden group">
               <Image 
                 src={ownerImg.imageUrl}
                 alt={ownerImg.description}
@@ -110,7 +110,7 @@ export default function AboutPage() {
         {/* Working Process Section */}
         <div className="space-y-16">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter">My <span className="text-accent font-serif italic text-glow">Working Process</span></h2>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tighter">My <span className="text-accent font-serif italic text-glow">Working Process</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto font-light text-base md:text-lg">A structured approach to turning ideas into reality, ensuring consistency and quality at every stage.</p>
           </div>
 
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="glass-card p-8 rounded-[2rem] relative group hover:border-accent/30"
+                className="glass-card p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] relative group hover:border-accent/30"
               >
                 <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-extrabold text-lg group-hover:scale-110 transition-transform shadow-lg shadow-accent/20">
                   {idx + 1}

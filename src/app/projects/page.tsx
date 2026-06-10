@@ -23,12 +23,12 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen pt-32 pb-24 px-4 md:px-8">
+    <div className="min-h-screen pt-20 md:pt-32 pb-16 md:pb-24 px-4 md:px-8 w-full max-w-full overflow-x-hidden flex flex-col">
       <Navbar />
       
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="space-y-4 text-center lg:text-left">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">Projects</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter">Projects</h1>
           <p className="text-muted-foreground text-lg md:text-xl font-light">Explore my recent work and technical experiments.</p>
         </div>
 
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className="flex flex-col glass-card p-8 md:p-12 rounded-[2.5rem] group border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors hover:border-accent/30"
+                className="flex flex-col glass-card p-5 sm:p-8 md:p-12 rounded-[1.5rem] sm:rounded-[2.5rem] group border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors hover:border-accent/30"
               >
                 {/* Content Section */}
                 <div className="flex flex-col flex-1 space-y-8">
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                       <project.icon className="w-8 h-8 text-accent animate-pulse" />
                       <h3 className="text-xs text-accent uppercase tracking-widest font-extrabold">{project.subtitle}</h3>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">{project.title}</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-tight">{project.title}</h2>
                   </div>
                   
                   <div className="text-base md:text-lg text-muted-foreground font-light leading-relaxed space-y-6">

@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={`${plusJakartaSans.variable} ${playfairDisplay.variable} antialiased bg-background overflow-x-hidden`}>
+    <html lang="en" className="dark scroll-smooth w-full max-w-full overflow-x-hidden">
+      <body className={`${plusJakartaSans.variable} ${playfairDisplay.variable} antialiased bg-background w-full max-w-full overflow-x-hidden`}>
         <GalaxyBackground />
         {children}
         <Toaster />

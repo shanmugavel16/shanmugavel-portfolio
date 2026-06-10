@@ -74,7 +74,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-4 md:px-8 relative overflow-hidden">
+    <div className="min-h-screen pt-20 md:pt-32 pb-16 md:pb-24 px-4 md:px-8 relative w-full max-w-full overflow-x-hidden flex flex-col">
       <Navbar />
       
       <div className="max-w-7xl mx-auto">
@@ -84,7 +84,7 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4 mb-20"
         >
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter">
             Con<span className="text-accent italic font-serif text-glow">tact</span>
           </h1>
           <div className="h-1.5 w-24 bg-accent mx-auto rounded-full mt-4" />
@@ -126,12 +126,12 @@ export default function ContactPage() {
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="glass-card p-8 md:p-10 rounded-[2.5rem] w-full self-start"
+            className="glass-card p-5 sm:p-8 md:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] w-full self-start"
           >
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8 text-left">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Your Name</Label>
+                  <Label htmlFor="name" className="block text-left w-full text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Your Name</Label>
                   <Input 
                     id="name" 
                     name="user_name"
@@ -141,7 +141,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Email Address</Label>
+                  <Label htmlFor="email" className="block text-left w-full text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Email Address</Label>
                   <Input 
                     id="email" 
                     name="user_email"
@@ -153,7 +153,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="subject" className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Subject</Label>
+                <Label htmlFor="subject" className="block text-left w-full text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Subject</Label>
                 <Input 
                   id="subject" 
                   name="subject"
@@ -162,7 +162,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Message</Label>
+                <Label htmlFor="message" className="block text-left w-full text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Message</Label>
                 <Textarea 
                   id="message" 
                   name="message"
@@ -171,7 +171,7 @@ export default function ContactPage() {
                   className="bg-white/5 border-white/10 min-h-[150px] rounded-2xl focus-visible:ring-accent focus-visible:border-accent focus:border-accent"
                 />
               </div>
-              <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-accent hover:bg-accent/80 h-16 rounded-2xl font-bold text-lg group shadow-xl shadow-accent/20">
+              <Button type="submit" size="lg" disabled={isSubmitting} className="flex w-full bg-accent hover:bg-accent/80 h-16 rounded-2xl font-bold text-lg group shadow-xl shadow-accent/20">
                 {isSubmitting ? (
                   <span className="flex items-center gap-2 justify-center">
                     <Loader2 className="w-5 h-5 animate-spin" /> Sending...

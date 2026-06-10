@@ -144,7 +144,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden flex flex-col">
       <Navbar />
 
       {/* 1. Hero Section */}
@@ -153,10 +153,10 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="z-10 bg-white/[0.03] backdrop-blur-md border border-white/10 px-5 py-2 rounded-full mb-6 flex items-center gap-2"
+          className="z-10 bg-white/[0.03] backdrop-blur-md border border-white/10 px-4 py-2 rounded-full mb-6 inline-flex items-center gap-2 max-w-[95%] sm:max-w-full"
         >
-          <Terminal className="w-3.5 h-3.5 text-accent animate-pulse" />
-          <span className="text-xs uppercase tracking-[0.25em] font-extrabold text-accent">Computer Science & Design Student</span>
+          <Terminal className="w-3.5 h-3.5 text-accent animate-pulse shrink-0" />
+          <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.25em] font-extrabold text-accent truncate">Computer Science & Design Student</span>
         </motion.div>
 
         <div className="z-10 text-center max-w-5xl mx-auto space-y-8 mb-20">
@@ -164,7 +164,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-9xl font-extrabold leading-none tracking-tighter"
+            className="text-4xl sm:text-7xl md:text-9xl font-extrabold leading-none tracking-tighter"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-purple-200">SHANMU</span>
             <span className="text-accent italic font-serif text-glow ml-2">GAVEL</span>
@@ -183,12 +183,12 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4 pt-4"
+            className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4 w-full max-w-md mx-auto px-4"
           >
-            <Button size="lg" className="rounded-full px-8 py-7 text-lg group bg-accent hover:bg-accent/80 text-white transition-all duration-300" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" className="w-full sm:w-auto rounded-full px-6 py-5 sm:px-8 sm:py-7 text-base sm:text-lg group bg-accent hover:bg-accent/80 text-white transition-all duration-300" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               Explore Projects <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="glass-button rounded-full px-8 py-7 text-lg border-white/10 text-white hover:bg-white/5 transition-all" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto glass-button rounded-full px-6 py-5 sm:px-8 sm:py-7 text-base sm:text-lg border-white/10 text-white hover:bg-white/5 transition-all" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Get in Touch <Send className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
@@ -210,7 +210,7 @@ export default function Home() {
             <motion.div 
               key={index}
               variants={itemVariants}
-              className="glass-card p-8 rounded-[2rem] text-center space-y-4 hover:border-accent/40 cursor-default"
+              className="glass-card p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-center space-y-4 hover:border-accent/40 cursor-default"
             >
               <div className="text-5xl mb-4 filter drop-shadow-md">{item.emoji}</div>
               <h3 className="text-2xl font-bold tracking-tight">{item.title}</h3>
@@ -237,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* 2. About Section */}
-      <section id="about" className="min-h-screen py-32 px-4 md:px-8 bg-black/10 scroll-mt-32">
+      <section id="about" className="min-h-screen py-16 md:py-32 px-4 md:px-8 bg-black/10 scroll-mt-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -246,7 +246,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <h2 className="text-5xl md:text-7xl font-bold leading-none mb-4 tracking-tighter">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-none mb-4 tracking-tighter">
               About <span className="text-accent font-serif italic text-glow">Me</span>
             </h2>
             
@@ -260,7 +260,7 @@ export default function Home() {
                 { icon: Heart, title: "Passion", text: "Designing and building high-performance modern websites while implementing smart IoT hardware systems for real-world impact." },
                 { icon: Target, title: "Goal", text: "To continuously advance my skills in modern tech stacks, creating intelligent, intuitive, and robust digital solutions." }
               ].map((card, i) => (
-                <div key={i} className="glass-card p-6 rounded-2xl flex gap-5 items-start hover:border-accent/30">
+                <div key={i} className="glass-card p-5 sm:p-6 rounded-xl sm:rounded-2xl flex gap-5 items-start hover:border-accent/30">
                   <div className="p-3 bg-accent/10 rounded-xl text-accent">
                     <card.icon className="w-6 h-6" />
                   </div>
@@ -272,8 +272,8 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="pt-4">
-              <Button size="lg" className="rounded-full px-8 py-6 text-lg group bg-white/5 hover:bg-white/10 border border-white/10 text-white" onClick={() => window.location.href = '/about'}>
+            <div className="pt-4 flex justify-center lg:justify-start">
+              <Button size="lg" className="w-full sm:w-auto rounded-full px-6 py-5 sm:px-8 sm:py-6 text-base sm:text-lg group bg-white/5 hover:bg-white/10 border border-white/10 text-white" onClick={() => window.location.href = '/about'}>
                 Read Full Biography <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
@@ -284,9 +284,9 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative aspect-[4/5] w-full max-w-md mx-auto rounded-[2.5rem] overflow-hidden glass-card p-3 shadow-2xl shadow-accent/10"
+            className="relative aspect-[4/5] w-full max-w-md mx-auto rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden glass-card p-2 sm:p-3 shadow-2xl shadow-accent/10"
           >
-            <div className="relative w-full h-full rounded-[2rem] overflow-hidden group">
+            <div className="relative w-full h-full rounded-[1.2rem] sm:rounded-[2rem] overflow-hidden group">
               <Image 
                 src={ownerImg.imageUrl}
                 alt={ownerImg.description}
@@ -306,10 +306,10 @@ export default function Home() {
       </section>
 
       {/* 3. Projects Section */}
-      <section id="projects" className="min-h-screen py-32 px-4 md:px-8 scroll-mt-32">
+      <section id="projects" className="min-h-screen py-16 md:py-32 px-4 md:px-8 scroll-mt-32">
         <div className="max-w-7xl mx-auto space-y-24">
           <div className="text-center space-y-4">
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter">Latest <span className="text-accent font-serif italic text-glow">Projects</span></h2>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Latest <span className="text-accent font-serif italic text-glow">Projects</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">A handpicked selection of my technical work bridging code, hardware, and design.</p>
           </div>
 
@@ -323,7 +323,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: idx * 0.1 }}
-                  className="flex flex-col gap-8 glass-card p-6 md:p-8 rounded-[2.5rem] group border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors"
+                  className="flex flex-col gap-8 glass-card p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] group border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors"
                 >
                   <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden glass-card">
                     <Image 
@@ -357,8 +357,8 @@ export default function Home() {
             })}
           </div>
           
-          <div className="text-center">
-            <Button size="lg" className="rounded-full px-8 py-6 text-lg group bg-white/5 hover:bg-white/15 border border-white/10 text-white" onClick={() => window.location.href = '/projects'}>
+          <div className="text-center px-4">
+            <Button size="lg" className="w-full sm:w-auto rounded-full px-6 py-5 sm:px-8 sm:py-6 text-base sm:text-lg group bg-white/5 hover:bg-white/15 border border-white/10 text-white" onClick={() => window.location.href = '/projects'}>
               View Project Details <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
@@ -366,10 +366,10 @@ export default function Home() {
       </section>
 
       {/* 4. Skills Section */}
-      <section id="skills" className="min-h-screen py-32 px-4 md:px-8 bg-black/10 scroll-mt-32">
+      <section id="skills" className="min-h-screen py-16 md:py-32 px-4 md:px-8 bg-black/10 scroll-mt-32">
         <div className="max-w-7xl mx-auto space-y-24">
           <div className="text-center space-y-6">
-            <h2 className="text-5xl md:text-8xl font-bold tracking-tighter">
+            <h2 className="text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter">
               Skills
             </h2>
           </div>
@@ -381,7 +381,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="glass-card p-8 rounded-[2rem] group hover:border-accent/30"
+                className="glass-card p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] group hover:border-accent/30"
               >
                 <div className="flex items-center gap-4 mb-8">
                   <div className="p-3 bg-accent/10 rounded-2xl group-hover:bg-accent group-hover:text-white transition-colors duration-500 text-accent">
@@ -403,10 +403,10 @@ export default function Home() {
       </section>
 
       {/* 5. Contact Section */}
-      <section id="contact" className="min-h-screen py-32 px-4 md:px-8 scroll-mt-32">
+      <section id="contact" className="min-h-screen py-16 md:py-32 px-4 md:px-8 scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-20">
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter">Con<span className="text-accent italic font-serif text-glow">tact</span></h2>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Con<span className="text-accent italic font-serif text-glow">tact</span></h2>
             <div className="h-1.5 w-24 bg-accent mx-auto rounded-full mt-4" />
           </div>
 
@@ -449,22 +449,22 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-card p-8 rounded-[2.5rem] border border-white/10"
+              className="glass-card p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] border border-white/10"
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 text-left">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Your Name</Label>
+                  <Label htmlFor="name" className="block text-left w-full text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Your Name</Label>
                   <Input id="name" name="user_name" placeholder="Enter your name" required className="bg-white/5 border-white/10 h-14 rounded-2xl focus-visible:ring-accent focus-visible:border-accent focus:border-accent" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Email Address</Label>
+                  <Label htmlFor="email" className="block text-left w-full text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Email Address</Label>
                   <Input id="email" name="user_email" type="email" placeholder="Enter your mail id" required className="bg-white/5 border-white/10 h-14 rounded-2xl focus-visible:ring-accent focus-visible:border-accent focus:border-accent" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Message</Label>
+                  <Label htmlFor="message" className="block text-left w-full text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Message</Label>
                   <Textarea id="message" name="message" placeholder="Tell me about your project..." required className="bg-white/5 border-white/10 min-h-[140px] rounded-2xl focus-visible:ring-accent focus-visible:border-accent focus:border-accent" />
                 </div>
-                <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-accent hover:bg-accent/80 h-16 rounded-2xl font-bold text-white group transition-all duration-300">
+                <Button type="submit" size="lg" disabled={isSubmitting} className="flex w-full bg-accent hover:bg-accent/80 h-16 rounded-2xl font-bold text-white group transition-all duration-300">
                   {isSubmitting ? (
                     <span className="flex items-center gap-2 justify-center">
                       <Loader2 className="w-5 h-5 animate-spin" /> Sending...

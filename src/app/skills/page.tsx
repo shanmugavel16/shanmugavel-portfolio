@@ -40,7 +40,7 @@ const skillGroups = [
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen pt-32 pb-24 px-4 md:px-8">
+    <div className="min-h-screen pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-8">
       <Navbar />
 
       <div className="max-w-7xl mx-auto space-y-24">
@@ -49,7 +49,7 @@ export default function SkillsPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-8xl font-extrabold tracking-tighter"
+            className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter"
           >
             Skills
           </motion.h1>
@@ -68,7 +68,7 @@ export default function SkillsPage() {
               whileHover={{ scale: 1.02 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="glass-card p-8 rounded-[2rem] group cursor-default"
+              className="glass-card p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] group cursor-default"
             >
               <div className="flex items-center gap-4 mb-8">
                 <div className="p-3 bg-accent/10 rounded-2xl group-hover:bg-accent group-hover:text-white transition-colors duration-500">
