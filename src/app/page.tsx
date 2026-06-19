@@ -179,7 +179,7 @@ export default function Home() {
             className="space-y-8"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-none mb-4 tracking-tighter">
-              About <span className="text-zinc-900 font-serif italic">Me</span>
+              <span className="inline-block">About <span className="text-zinc-900 font-serif italic">Me</span></span>
             </h2>
             
             <p className="text-muted-foreground text-base font-light leading-relaxed">
@@ -246,7 +246,7 @@ export default function Home() {
       <section id="projects" className="min-h-screen py-16 md:py-32 px-4 md:px-8 scroll-mt-32">
         <div className="max-w-7xl mx-auto space-y-24">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">Latest <span className="text-zinc-900 font-serif italic">Projects</span></h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter"><span className="inline-block">Latest <span className="text-zinc-900 font-serif italic">Projects</span></span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto font-light text-base">A handpicked selection of my technical work bridging code, hardware, and design.</p>
           </div>
 
@@ -338,7 +338,7 @@ export default function Home() {
       <section id="contact" className="min-h-screen py-16 md:py-32 px-4 md:px-8 scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">Con<span className="text-zinc-900 italic font-serif">tact</span></h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter"><span className="inline-block">Con<span className="text-zinc-900 italic font-serif">tact</span></span></h2>
             <div className="h-1.5 w-24 bg-zinc-900 mx-auto rounded-full mt-4" />
           </div>
 

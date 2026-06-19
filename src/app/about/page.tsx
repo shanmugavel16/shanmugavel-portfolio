@@ -51,7 +51,7 @@ export default function AboutPage() {
             className="space-y-8"
           >
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-none tracking-tighter mb-8">
-              About <span className="text-accent font-serif italic text-glow">Me</span>
+              <span className="inline-block">About <span className="text-accent font-serif italic text-glow">Me</span></span>
             </h1>
             
             <div className="about-details space-y-6">

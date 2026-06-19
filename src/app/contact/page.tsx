@@ -85,7 +85,7 @@ export default function ContactPage() {
           className="text-center space-y-4 mb-20"
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter">
-            Con<span className="text-accent italic font-serif text-glow">tact</span>
+            <span className="inline-block">Con<span className="text-accent italic font-serif text-glow">tact</span></span>
           </h1>
           <div className="h-1.5 w-24 bg-accent mx-auto rounded-full mt-4" />
         </motion.div>

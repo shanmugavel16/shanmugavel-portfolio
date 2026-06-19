@@ -58,7 +58,7 @@ export function Navbar() {
                     Navigation
                   </SheetTitle>
                 </div>
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-8 items-center justify-center py-8">
                   {links.map((link) => {
                     const isActive = pathname === link.href;
                     return (
@@ -67,7 +67,7 @@ export function Navbar() {
                         href={link.href}
                         onClick={() => setOpen(false)}
                         className={cn(
-                          "text-2xl font-bold transition-colors text-left outline-none",
+                          "text-2xl font-bold transition-colors text-center outline-none",
                           isActive ? "text-zinc-950" : "text-zinc-500"
                         )}
                       >

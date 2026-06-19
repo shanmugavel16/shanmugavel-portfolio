@@ -27,7 +27,7 @@ export function HeroBlock() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mb-6 text-6xl font-extrabold text-foreground md:text-8xl tracking-tighter"
+                        className="mb-6 text-4xl sm:text-6xl md:text-8xl font-extrabold text-foreground tracking-tighter"
           >
             SHANMUGAVEL
           </motion.h1>
@@ -45,11 +45,11 @@ export function HeroBlock() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="mb-12 flex flex-wrap justify-center gap-4"
+            className="mb-12 flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto sm:max-w-none"
           >
             <Button 
               size="lg" 
-              className="gap-2 bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6 py-6"
+              className="w-full sm:w-auto gap-2 bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6 py-6"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Mail className="h-4 w-4" />
@@ -58,7 +58,7 @@ export function HeroBlock() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="gap-2 border-zinc-200 text-zinc-900 hover:bg-zinc-50 rounded-full px-6 py-6"
+              className="w-full sm:w-auto gap-2 border-zinc-200 text-zinc-900 hover:bg-zinc-50 rounded-full px-6 py-6"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Projects
